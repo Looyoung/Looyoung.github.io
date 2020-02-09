@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="./star.ico" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <link rel="icon"
+        href="./star.ico" />
   <title>摘星小王子</title>
   <style>
     body {
       background-color: #8abeb2;
     }
+    h1 {
+      font-size: 50px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+    }
     img {
       width: 200px;
+      margin-top: 20px;
+    }
+
+    video,
+    img {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    }
+    /* 去掉选中时的蓝色边框 */
+    video:focus {
+      outline: none
     }
   </style>
 </head>
+
 <body>
   <h1>摘星小王子</h1>
-  <video width="300"controls>
-      <source src="./assets/videos/wangcai.mp4" type="video/mp4">
+  <video width="300"
+         controls>
+    <source src="./assets/videos/wangcai.mp4"
+            type="video/mp4">
   </video>
   <br>
-  <img src="./assets/images/dog233.jpg" alt="">
+  <img src="./assets/images/dog233.jpg"
+       alt="">
   <br>
-  <img src="./assets/images/zengkangrong.jpg" alt="">
+  <img src="./assets/images/zengkangrong.jpg"
+       alt="">
 </body>
+
 </html>
