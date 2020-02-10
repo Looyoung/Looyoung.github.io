@@ -14,33 +14,60 @@
     body {
       background-color: #8abeb2;
     }
+
     h1 {
       font-size: 50px;
       text-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
     }
+
     img {
       width: 200px;
       margin-top: 20px;
     }
 
-    video,
+    iframe,
     img {
       box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
     }
+
     /* 去掉选中时的蓝色边框 */
     video:focus {
       outline: none
+    }
+    iframe {
+      margin-bottom: 20px;
     }
   </style>
 </head>
 
 <body>
   <h1>摘星小王子</h1>
-  <video width="300"
-         controls>
-    <source src="./assets/videos/wangcai.mp4"
-            type="video/mp4">
-  </video>
+  <iframe src="http://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
+          scrolling="no"
+          border="0"
+          frameborder="no"
+          framespacing="0"
+          allowfullscreen="true"
+          style="width: 640px; height: 430px; max-width: 100%"
+          sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
+  <br>
+  <iframe src="http://player.bilibili.com/player.html?aid=65370263&cid=113486281&page=1&high_quality=1"
+          scrolling="no"
+          border="0"
+          frameborder="no"
+          framespacing="0"
+          allowfullscreen="true"
+          style="width: 640px; height: 430px; max-width: 100%"
+          sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
+  <br>
+  <iframe src="http://player.bilibili.com/player.html?aid=54570111&cid=95456071&page=1&high_quality=1"
+          scrolling="no"
+          border="0"
+          frameborder="no"
+          framespacing="0"
+          allowfullscreen="true"
+          style="width: 640px; height: 430px; max-width: 100%"
+          sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
   <br>
   <img src="./assets/images/dog233.jpg"
        alt="">
