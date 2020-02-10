@@ -15,6 +15,11 @@
       background-color: #8abeb2;
     }
 
+    .w {
+      width: 880px;
+      margin: 0 auto;
+    }
+
     h1 {
       font-size: 50px;
       text-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
@@ -25,7 +30,7 @@
       margin-top: 20px;
     }
 
-    iframe,
+    .video-box,
     img {
       box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
     }
@@ -35,47 +40,48 @@
       outline: none
     }
 
-    iframe {
-      margin-bottom: 20px;
-    }
-
     .video-box {
+      width: 640px;
+      height: 342px;
       position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 75%;
+      top: 0;
+      left: 0;
+      /* border: 2px solid green; */
+      overflow: hidden;
     }
 
-    .video-box iframe {
+    iframe {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      top: -50px;
       left: 0;
-      top: 0;
+      margin-bottom: 20px;
+      width: 640px;
+      height: 430px;
     }
   </style>
 </head>
 
 <body>
-  <h1>摘星小王子</h1>
-  <video-box>
-    <iframe src="https://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
-            scrolling="no"
-            frameborder="no"
-            framespacing="0"
-            allowfullscreen="true"
-            style="width: 640px; height: 430px; max-width: 100%"
-            sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts">
-    </iframe>
-  </video-box>
+  <div class="w">
+    <h1>摘星小王子</h1>
+    <div class="video-box">
+        <iframe src="https://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
+        scrolling="no"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true">
+</iframe>
+    </div>
+    
 
-  <br>
-  <br>
-  <img src="./assets/images/dog233.jpg"
-       alt="">
-  <br>
-  <img src="./assets/images/zengkangrong.jpg"
-       alt="">
+    <br>
+    <br>
+    <img src="./assets/images/dog233.jpg"
+         alt="">
+    <br>
+    <img src="./assets/images/zengkangrong.jpg"
+         alt="">
+  </div>
 </body>
 
 </html>
