@@ -34,37 +34,42 @@
     video:focus {
       outline: none
     }
+
     iframe {
       margin-bottom: 20px;
+    }
+
+    .video-box {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 75%;
+    }
+
+    .video-box iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
     }
   </style>
 </head>
 
 <body>
   <h1>摘星小王子</h1>
-  <iframe src="https://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
-          scrolling="no"
-          frameborder="no"
-          framespacing="0"
-          allowfullscreen="true"
-          style="width: 640px; height: 430px; max-width: 100%"
-          sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
+  <video-box>
+    <iframe src="https://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
+            scrolling="no"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+            style="width: 640px; height: 430px; max-width: 100%"
+            sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts">
+    </iframe>
+  </video-box>
+
   <br>
-  <iframe src="https://player.bilibili.com/player.html?aid=65370263&cid=113486281&page=1&high_quality=1"
-          scrolling="no"
-          frameborder="no"
-          framespacing="0"
-          allowfullscreen="true"
-          style="width: 640px; height: 430px; max-width: 100%"
-          sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
-  <br>
-  <iframe src="https://player.bilibili.com/player.html?aid=54570111&cid=95456071&page=1&high_quality=1"
-          scrolling="no"
-          frameborder="no"
-          framespacing="0"
-          allowfullscreen="true"
-          style="width: 640px; height: 430px; max-width: 100%"
-          sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe>
   <br>
   <img src="./assets/images/dog233.jpg"
        alt="">
