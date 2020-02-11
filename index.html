@@ -10,7 +10,8 @@
   <link rel="icon"
         href="./star.ico" />
   <title>摘星小王子</title>
-  <link rel="stylesheet" href="./assets/styles/index.css" />
+  <link rel="stylesheet"
+        href="./assets/styles/index.css" />
 </head>
 
 <body>
@@ -18,10 +19,10 @@
     <h1>摘星小王子</h1>
     <div class="video-box">
       <iframe src="https://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
-        scrolling="no"
-        frameborder="no"
-        framespacing="0"
-        allowfullscreen="true">
+              scrolling="no"
+              frameborder="no"
+              framespacing="0"
+              allowfullscreen="true">
       </iframe>
     </div>
     <img src="https://img-blog.csdnimg.cn/20200210224714211.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_16,color_FFFFFF,t_0"
@@ -30,6 +31,48 @@
     <img src="https://img-blog.csdnimg.cn/2020021022474679.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
          alt="">
   </div>
+
+  <script>
+    justify_location()
+    function justify_location() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+        // 支持
+        console.log("支持地理位置接口");
+      } else {
+        // 不支持
+        console.log("不支持地理位置接口");
+      }
+    }
+
+    //同意授权
+
+    function geoSuccess(event) {
+      alert(`纬度:` + event.coords.latitude + ', ' + `经度:` + event.coords.longitude);
+
+    }
+    //拒绝授权
+
+    function geoError(error) {
+      console.log(error)
+      console.log("Error code " + error.code + ". " + error.message);
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          alert("定位失败,用户拒绝请求地理定位");
+          break;
+        case error.POSITION_UNAVAILABLE:
+          alert("定位失败,位置信息是不可用");
+          break;
+        case error.TIMEOUT:
+          alert("定位失败,请求获取用户位置超时");
+          break;
+        case error.UNKNOWN_ERROR:
+          alert("定位失败,定位系统失效");
+          break;
+      }
+    }
+
+  </script>
 </body>
 
 </html>
