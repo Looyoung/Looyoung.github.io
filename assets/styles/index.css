@@ -48,3 +48,14 @@ iframe {
   width: 640px;
   height: 430px;
 }
+.img-box img {
+  float: left;
+  margin-right: 50px;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
