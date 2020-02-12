@@ -12,6 +12,28 @@
   <title>摘星小王子</title>
   <link rel="stylesheet"
         href="./assets/styles/index.css" />
+  <link rel="stylesheet"
+        href="https://unpkg.com/swiper/css/swiper.min.css">
+  <style>
+    .swiper-container {
+      margin-top: 50px;
+      margin-left: 0px;
+      width: 400px;
+    }
+
+    .swiper-slide .pic {
+      width: 100%;
+      box-shadow: none;
+      margin-top: 0;
+      display: block;
+    }
+
+    /* .swiper-slide {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+          } */
+  </style>
 </head>
 
 <body>
@@ -25,13 +47,43 @@
               allowfullscreen="true">
       </iframe>
     </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="pic"
+               src="https://img-blog.csdnimg.cn/20200213013505731.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+               alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="pic"
+               src="https://img-blog.csdnimg.cn/20200213013523900.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+               alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="pic"
+               src="https://img-blog.csdnimg.cn/20200213013544887.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+               alt="">
+        </div>
+      </div>
+    </div>
     <img src="https://img-blog.csdnimg.cn/20200210224714211.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_16,color_FFFFFF,t_0"
          alt="">
     <br>
     <img src="https://img-blog.csdnimg.cn/2020021022474679.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
          alt="">
+    <br>
+    <img src="https://img-blog.csdnimg.cn/20200213013440132.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+         alt="">
   </div>
-
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 1000
+      },//可选选项，自动滑动
+      loop: true,
+    })
+  </script>
 </body>
 
 </html>
