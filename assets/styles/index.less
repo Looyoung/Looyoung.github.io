@@ -13,6 +13,17 @@ body {
   padding: 20px 50px 0;
   background-color: rgba(167, 162, 162, 0.16);
   box-shadow: 0 0 60px 10px rgba(136, 184, 192, 0.5);
+  position: relative;
+  top: 0;
+  left: 0;
+  .audio-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(140, 190, 231, 0.87);
+  }
 }
 
 h1 {
@@ -21,10 +32,6 @@ h1 {
   text-shadow: 0 0 10px rgba(255, 255, 255, .3);
 }
 
-img {
-  width: 200px;
-  margin-top: 50px;
-}
 
 .video-box,
 img {
@@ -56,17 +63,42 @@ iframe {
   height: 430px;
 }
 
-.img-box {
-  img {
-    float: left;
-    margin-right: 50px;
-  }
-}
-
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
   height: 0;
   visibility: hidden;
+}
+
+.banner-container {
+  width: 880px;
+  height: 300px;
+  margin: 50px auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  &>div {
+    position: absolute;
+    &.img-box1 {
+      top: 50%;
+      transform: translateY(-50%);
+      img {
+        width: 200px;
+      }
+    }
+    &.img-box2 {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      img {
+        width: 200px;
+      }
+    }
+    &.swiper-container {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
