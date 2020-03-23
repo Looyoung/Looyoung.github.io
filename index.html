@@ -13,6 +13,8 @@
         href="./assets/styles/index.css" />
   <link rel="stylesheet"
         href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet"
+        href="./fullpage.js/dist/fullpage.css">
   <style>
     .swiper-container {
       margin-left: 0px;
@@ -32,93 +34,105 @@
 </head>
 
 <body>
-  <div class="w">
-    <!-- <div class="audio-box">
-      <span>play music</span>
-      <audio id="audio1">
-        <source src="./assets/videos/Coldplay - Yellow.mp3"
-                type="audio/mp3">
-      </audio>
-    </div> -->
-    <h1>摘星小王子</h1>
-    <div class="video-box">
-      <iframe src="https://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
-              scrolling="no"
-              frameborder="no"
-              framespacing="0"
-              allowfullscreen="true">
-      </iframe>
-    </div>
-
-    <div class="banner-container">
-      <!-- <div class="img-box1">
-        <img src="https://img-blog.csdnimg.cn/2020021022474679.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
-             alt="">
-      </div> -->
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img class="pic"
-                 src="https://img-blog.csdnimg.cn/20200213013505731.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
-                 alt="">
-          </div>
-          <div class="swiper-slide">
-            <img class="pic"
-                 src="https://img-blog.csdnimg.cn/20200213013523900.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
-                 alt="">
-          </div>
-          <div class="swiper-slide">
-            <img class="pic"
-                 src="https://img-blog.csdnimg.cn/20200213013544887.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
-                 alt="">
-          </div>
+  <div class="nav">
+    <ul>
+        <li data-menuanchor="firstPage" class="menuList"><a href="#firstPage">首页</a></li>
+        <li data-menuanchor="secondPage"class="menuList"><a href="#secondPage">作品</a></li>
+        <li data-menuanchor="thirdPage" class="menuList"><a href="#thirdPage">相册</a></li>
+    </ul>
+  </div>
+  <div id="fullpage">
+      <div class="section">
+        <div class="box section1-box">
+            <img class="avator" src="./assets/images/portrait_wechat.jpg" alt="">
+            <h1>Louis</h1>
         </div>
-        <div class="swiper-pagination"></div>
-        <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
       </div>
-      <!-- <div class="img-box2">
-        <img src="https://img-blog.csdnimg.cn/20200213222617904.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
-             alt="">
-      </div> -->
+      <div class="section">
+        <div class="box section2-box">
+          <iframe src="https://player.bilibili.com/player.html?aid=69496936&cid=120439404&page=1&high_quality=1"
+                  scrolling="no"
+                  frameborder="no"
+                  framespacing="0"
+                  allowfullscreen="true">
+          </iframe>
+        </div>
+      </div>
+      <div class="section">
+        <div class="box">
+            <div class="banner-container">
+                <!-- <div class="img-box1">
+                              <img src="https://img-blog.csdnimg.cn/2020021022474679.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+                                    alt="">
+                            </div> -->
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="pic"
+                           src="https://img-blog.csdnimg.cn/20200213013505731.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+                           alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="pic"
+                           src="https://img-blog.csdnimg.cn/20200213013523900.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+                           alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="pic"
+                           src="https://img-blog.csdnimg.cn/20200213013544887.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+                           alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+                </div>
+                <!-- <div class="img-box2">
+                              <img src="https://img-blog.csdnimg.cn/20200213222617904.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvb3lvdW5ncw==,size_1,color_FFFFFF,t_0"
+                                    alt="">
+                            </div> -->
+              </div>
+        </div>
+        
+      </div>
     </div>
+  </div>
 
-  </div>
-  </div>
+  <script src="./jquery-3.3.1.min.js"></script>
+  <script src="./fullpage.js/dist/fullpage.js"></script>
+  <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
+  <script src="./fullpage.js/vendors/easings.js"></script>
+  <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+  <script type="text/javascript"
+          src="./fullpage.js/vendors/scrolloverflow.js"></script>
+
   <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
-  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
   </script>
   <script>
     $(function () {
       var mySwiper = new Swiper('.swiper-container', {
-        autoplay: {
-          delay: 2000,
-          disableOnInteraction: false
-        },//可选选项，自动滑动
+        // autoplay: {
+          // delay: 2000,
+          // disableOnInteraction: false
+        // },//可选选项，自动滑动
         loop: true,
         pagination: {
           el: '.swiper-pagination',
         },
-      })
-      
-      $('.audio-box').on('click', playAudio);
-    })
-    var audio = document.getElementById('audio1');
-    audio.volume = .3;
-    function playAudio() {
-      //播放器控制
-      event.stopPropagation();//防止冒泡
-        if (audio.paused) { //如果当前是暂停状态
-          $('.audio-box span').text('pause music')
-          //$('.btn-audio').css({'background':'url(images/voice_play.png) no-repeat center bottom','background-size':'cover'});
-          audio.play(); //播放
-          return;
-        } else {//当前是播放状态
-          $('.audio-box span').text('play music')
-          //$('.btn-audio').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
-          audio.pause(); //暂停
-        }
-    }
+      });
+      $('#fullpage').fullpage({
+        //options here
+        // autoScrolling: true,
+        paddingTop: '50px',
+        scrollHorizontally: true,
+        slidesNavigation: true,
+        navigation: true,
+        anchors:['firstPage', 'secondPage', 'thirdPage'],
+        menu: '.nav'
+      });
 
+      //methods
+      // $.fn.fullpage.setAllowScrolling(false);
+    })
 
   </script>
 </body>
